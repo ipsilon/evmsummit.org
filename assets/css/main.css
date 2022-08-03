@@ -3252,8 +3252,13 @@ input, select, textarea {
 		}
 
 		.wrapper.style2 {
-			background-color: #f4ab33;
+			background-color: #ffffff;
+      color: rgba(0,0, 0.7);
 		}
+
+    .wrapper.style2 h2 {
+      color: rgba(0,0, 0.7);
+    }
 
 		.wrapper.style2-alt {
 			background-color: #3e4094;
