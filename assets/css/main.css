@@ -3243,7 +3243,7 @@ input, select, textarea {
 		}
 
 		.wrapper.style1 {
-			background-color: #5e2bff;
+			background-color: #e8a87c;
 		}
 
 		.wrapper.style1-alt {
@@ -3251,7 +3251,7 @@ input, select, textarea {
 		}
 
 		.wrapper.style2 {
-			background-color: #c04cfd;
+			background-color: #c38d9e;
 		}
 
 		.wrapper.style2-alt {
@@ -3259,17 +3259,25 @@ input, select, textarea {
 		}
 
 		.wrapper.style3 {
-			background-color: #ffffff;
-			color: rgba(0, 0, 0, 0.7);
-		}
-
-		.wrapper.style3 h2 {
-			color: rgba(0, 0, 0, 0.7);
+			background-color: #41b3a3;
 		}
 
 		.wrapper.style3-alt {
 			background-color: #953d75;
 		}
+
+		.wrapper.style4 {
+			background-color: #e27d60;
+		}
+
+		.wrapper.style5 {
+			background-color: #85dcbc;
+		}
+
+		.wrapper.style6 {
+			background-color: #e8a87c;
+		}
+
 
 		.wrapper.fullscreen {
 			display: -moz-flex;
