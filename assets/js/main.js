@@ -197,3 +197,19 @@ function showMenu() {
     x.style.display = "block";
   }
 }
+
+function showBio(bio_id) {
+  var show_bio_link = document.getElementById("show_bio_" + bio_id);
+  var bio = document.getElementById("bio_" + bio_id);
+
+  show_bio_link.style.display = "none";
+  bio.style.display = "block";
+}
+
+function hideBio(bio_id) {
+  var show_bio_link = document.getElementById("show_bio_" + bio_id);
+  var bio = document.getElementById("bio_" + bio_id);
+
+  show_bio_link.style.display = "block";
+  bio.style.display = "none";
+}

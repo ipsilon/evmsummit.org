@@ -222,11 +222,11 @@ input, select, textarea {
 	}
 
 	h4 {
-		font-size: 1em;
+		font-size: 0.8em;
 	}
 
 	h5 {
-		font-size: 0.8em;
+		font-size: 0.7em;
 	}
 
 	h6 {
@@ -3985,4 +3985,13 @@ input, select, textarea {
 
 #sm-icons a {
   padding: 0 0.5em 0 0;
+}
+
+.circular-square {
+  border-radius: 50%;
+  width: 128px;
+}
+
+.hidden {
+  display: none;
 }
