@@ -29,7 +29,7 @@ speakers = [
          },
         {
             'name': 'Daniel Kirchner',
-            'project': 'Solidity',
+            'project': 'Solidity - Ethereum Foundation',
             'bio': ''
         },
         { 
@@ -59,7 +59,7 @@ speakers = [
         }, 
         {
             'name': 'Lightclient',
-            'project': 'Geth',
+            'project': 'Geth - Ethereum Foundation',
             'bio': ''
         },
         {
