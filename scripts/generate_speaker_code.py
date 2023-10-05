@@ -20,7 +20,7 @@ speakers = [
         {
             'name': 'Ayman Bouchareb',
             'project': 'Nethermind',
-            'bio': 'Ayman is a 24yo software engineer from Morocco, joined Nethermind last year as part of the core team, and mostly focus on EVM related topics (since Ayman likes VMs), and now Ayman works on small EIPs that touchs the EVM for Shanghai and Cancun forks as well as working on the full EOF update for the EVM.'
+            'bio': 'Ayman is a 24 years old software engineer from Morocco, joined Nethermind last year as part of the core team, and mostly focus on EVM related topics (since Ayman likes VMs), and now Ayman works on small EIPs that touchs the EVM for Shanghai and Cancun forks as well as working on the full EOF update for the EVM.'
         },
         { 
          'name': 'David Pearce', 
