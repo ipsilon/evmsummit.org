@@ -65,7 +65,7 @@ speakers = [
         {
             'name': 'Mamy André-Ratsimbazafy',
             'project': 'Taiko',
-            'bio': '',
+            'bio': 'Mamy has been an Ethereum core dev for 5 years, developing the Nimbus consensus client. After the success of The Merge, he now focuses on scaling Ethereum, by leading the ZK engineering team at Taiko.',
             'picture': 'mamy_andre_ratsimbazafy'
         },
         {
