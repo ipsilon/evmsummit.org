@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import os
+import sys
 
 speakers = [
         { 
@@ -106,22 +107,29 @@ speakers = [
 i = 0
 code = ""
 spacing = " " * 15
+debug=False
+
+if len(sys.argv) == 2 and sys.argv[1] == "debug":
+    debug=True
+
+print(f"{spacing}<!-- SPEAKERS -->")
 for s in speakers:
     i += 1
 
-    print("<!--")
     name_id = s['name'].lower().replace(' ', '_')
-    print(name_id)
     if 'picture' in s.keys():
         name_id = s['picture']
-    print(name_id)
     image_path = f"../images/speakers/{name_id}.jpg"
-    print(image_path)
     if not os.path.exists(f"../images/speakers/{name_id}.jpg"):
         name_id = "default"
-    print(name_id)
-    print("-->")
+        if debug:
+            print(f"{spacing}<!-- {image_path} not found -->")
     bio = s['bio'].replace('\n', '</p><p>')
+
+    if debug:
+        print(f"{spacing}<!-- {s['name']} -->")
+        print(f"{spacing}<!-- {image_path} -->")
+        print(f"{spacing}<!-- {name_id} -->")
 
     code += f"""{spacing}<section id="speaker_{i}">
 {spacing}<img class="circular-square" src="images/speakers/{name_id}.jpg" alt="{s['name']}"/>
@@ -148,3 +156,4 @@ if i % 2 == 1:
     code += f"{spacing}<section></section>"
 
 print(code)
+print(f"{spacing}<!-- SPEAKERS END -->")
