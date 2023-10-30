@@ -23,16 +23,26 @@ speakers = [
             'project': 'Nethermind',
             'bio': 'Ayman is a 24 years old software engineer from Morocco, joined Nethermind last year as part of the core team, and mostly focus on EVM related topics (since Ayman likes VMs), and now Ayman works on small EIPs that touchs the EVM for Shanghai and Cancun forks as well as working on the full EOF update for the EVM.'
         },
+        {
+            'name': 'Daniel Kirchner',
+            'project': 'Solidity - Ethereum Foundation',
+            'bio': ''
+        },
+        {
+            'name': 'Daniel Marzec',
+            'project': 'Flashbots',
+            'bio': 'SUAVE Protocol R&D'
+        },
         { 
          'name': 'David Pearce', 
          'project': 'Consensys', 
          'bio': "David is a research engineer in the Trustworthy Smart Contracts Team at ConsenSys.\nDavid's current focus is on the application of formal methods to smart contracts.\nBefore that, David was an Associate Professor in the School of Engineering and Computer Science at Victoria University of Wellington, NZ.\nDavid graduated from the Department of Computing at Imperial College London, and moved to New Zealand in 2004.\nDavid's research interests are in programming languages, compilers, static analysis and formal verification.  David is the author of the Whiley programming language which (like Dafny) supports formal verification of functional specifications (i.e. preconditions / postconditions)." 
          },
         {
-            'name': 'Daniel Kirchner',
-            'project': 'Solidity - Ethereum Foundation',
-            'bio': ''
-        },
+         'name': 'David Weisiger',
+         'project': 'Taiko Labs',
+         'bio': 'Head of DevRel @ Taiko Labs',
+         },
         { 
          'name': 'Danno Ferrin', 
          'project': 'Hyperledger Besu', 
@@ -43,6 +53,17 @@ speakers = [
             'project': 'Paradigm',
             'bio': 'Reth core dev, revm author.'
         },
+        {
+            'name': 'Eduardo Sanou',
+            'project': 'PSE',
+            'bio': 'Learned zk in iden3 (now Polygon Hermez) while developing a decentralized identity protocol, and later a zkRollup.\nNow working on the zkEVM CE project in PSE (EF) for nearly 2 years',
+        },
+        {
+            'name': 'Federico Kunze Küllmer',
+            'project': 'Evmos',
+            'bio': 'Founder of Evmos, CEO at Altiplanic. Previously IBC & Cosmos Core Engineer',
+            'picture': 'federico_kunze_kullmer'
+            },
         {
             'name': 'Greg Colvin',
             'project': '',
@@ -58,6 +79,11 @@ speakers = [
             'project': 'Polygon',
             'bio': ''
         }, 
+        {
+            'name': 'Leo Alt',
+            'project': 'powdr',
+            'bio': 'Leo currently works on powdr building zkVM tooling.\nBefore that he worked on Formal Verification and Solidity at the Ethereum Foundation for many years, mostly doing research and building tools for formal verification of smart contracts and zk circuits.\nLeo also holds a PhD in Computer Science, focused on SMT solving and software verification.',
+        },
         {
             'name': 'Lightclient',
             'project': 'Geth - Ethereum Foundation',
@@ -97,9 +123,24 @@ speakers = [
             'bio': ''
         },
         {
+            'name': 'Raul Jordan',
+            'project': 'Offchain Labs',
+            'bio': 'Raul Jordan is a senior software engineer at Offchain Labs and a maintainer of the Prysm Ethereum consensus client.\nHes an avid fan of programming languages and onboarding a lot more developers outside of blockchain into the exciting world of Ethereum technology.'
+        },
+        {
+            'name': 'Remco',
+            'project': 'Nomic Foundation',
+            'bio': 'Remco is the tech lead on Nomic Foundation\'s EDR team, where he works on the open-source building blocks that empower developers to create new dev tools for the Ethereum ecosystem.',
+        },
+        {
             'name': 'Tim Beiko',
             'project': 'Ethereum Foundation',
             'bio': 'Tim runs the AllCoreDevs call for Ethereum'
+        },
+        {
+            'name': 'Ujval Misra',
+            'project': 'UC Berkeley; Specular',
+            'bio': 'Ujval is a CS PhD student at UC Berkeley, advised by Dawn Song.\nHis research interests broadly lie in security and privacy—particularly in the context of decentralized trust.\nHis recent focus has been on decentralization problems in Ethereum-based L2 systems.',
         },
         ]
 
