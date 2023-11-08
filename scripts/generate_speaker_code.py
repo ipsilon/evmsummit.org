@@ -187,7 +187,7 @@ speakers = [
             'bio': 'Raoul Schaffranek studied Computer Science at RWTH Aachen University, Germany, where he obtained B.Sc. and M.Sc. degrees.\nHe wrote his master thesis about compositional modeling and fully automated verification of distributed systems and formalized his findings with the Isabelle proof assistant.\nBefore joining RV, Raoul worked for more than eight years as a software engineer for the German software company graphodata AG.\nRaoul considers programming a human-centric rather than machine-centric activity, and he firmly believes that we should build modern programming languages and verification tools upon this perspective.',
         },
         {
-            'name': 'Simi Vera',
+            'name': 'Smriti Verma',
             'project': 'OpenZeppelin',
             'bio': 'Smriti has been working at OpenZeppelin as a Blockchain Security Engineer, since 2020.\nPrior to transition into web3 security, she was working as a blockchain solutions engineer. She comes from a software development background, and has a masters in Data Analytics.',
         },
