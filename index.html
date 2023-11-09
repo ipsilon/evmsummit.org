@@ -12,7 +12,7 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
-	<body class="is-preload">
+	<body class="is-preload" onload="loadSessions();">
 
 	<!-- Mobile Menu -->
 		<div class="topnav">
@@ -102,6 +102,8 @@
 
 							<ul class="actions">
 								<li><a href="#mission" class="button scrolly">Learn more</a></li>
+                <li><a href="#program" class="button scrolly">Program</a></li>
+                <li><a href="https://app.streameth.org/devconnect/evm_summit" class="button scrolly">See more on Streameth</a></li>
 							</ul>
 						</div>
 					</section>
@@ -288,8 +290,8 @@
     
                    </section>
                <section id="speaker_10">
-                   <img class="circular-square" src="images/speakers/daniel_marzec.jpg" alt="Daniel Marzec"/>
-                   <h3>Daniel Marzec</h3>
+                   <img class="circular-square" src="images/speakers/daniel_marzec.jpg" alt="Daniel Marzec (dmarz)"/>
+                   <h3>Daniel Marzec (dmarz)</h3>
                    <h4>Flashbots</h4>
     
                    <ul class="actions">
@@ -450,8 +452,8 @@
     
                    </section>
                <section id="speaker_22">
-                   <img class="circular-square" src="images/speakers/jose_pedro_sousa.jpg" alt="Jose Pedro Sousa"/>
-                   <h3>Jose Pedro Sousa</h3>
+                   <img class="circular-square" src="images/speakers/jose_pedro_sousa.jpg" alt="José Pedro Sousa"/>
+                   <h3>José Pedro Sousa</h3>
                    <h4>Aztec Labs</h4>
     
                    <ul class="actions">
@@ -466,8 +468,8 @@
     
                    </section>
                <section id="speaker_23">
-                   <img class="circular-square" src="images/speakers/leo_alt.jpg" alt="Leo Alt"/>
-                   <h3>Leo Alt</h3>
+                   <img class="circular-square" src="images/speakers/leonardo_alt.jpg" alt="Leonardo Alt"/>
+                   <h3>Leonardo Alt</h3>
                    <h4>powdr</h4>
     
                    <ul class="actions">
@@ -723,8 +725,18 @@
 				<!-- Program -->
 					<section id="program" class="wrapper style6 fade-up">
 						<div class="inner">
-							<h2>Program</h2>
-							<p>TBC soon</p>
+							<h1>Program</h1>
+
+              <ul class="actions">
+                <li><a id="emirgan1-button" onclick="showSessions('emirgan1')" href="#program" class="button disabled scrolly">Emirgan 1</a></li>
+                <li><a id="emirgan2-button" onclick="showSessions('emirgan2')" href="#program" class="button scrolly">Emirgan 2</a></li>
+              </ul>
+
+              <div id="sessions-main" class="sessions">
+              </div>
+
+              <div id="sessions-breakout" class="sessions">
+              </div>
 						</div>
 					</section>
 

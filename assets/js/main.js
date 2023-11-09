@@ -189,6 +189,116 @@
 
 })(jQuery);
 
+function getIstanbulTime(input_date) {
+  var local_time = input_date.toLocaleString('en-US', { timeZone: 'Europe/Istanbul' }).split(" ");
+  var am_pm = local_time[2];
+  var result = local_time[1].split(":");
+  result.pop();
+  return result.join(":") + " " + am_pm;
+}
+
+function getNameIds() {
+  var name_ids = {};
+  $.ajax({
+    'async': false,
+    'global': false,
+    'url': "/assets/speakers.json",
+    'dataType': "json",
+    'success': function (data) {
+      name_ids = data;
+    }
+  });
+  return name_ids;
+}
+
+function getSessionHtml(session, name_ids) {
+  var session_name = session.name;
+  var session_description = session.description;
+  var session_start_time = session.start;
+  var session_end_time = session.end;
+  var session_speakers = session.speakers;
+  var session_speaker_names = [];
+  var session_start = new Date(session_start_time);
+  var session_end = new Date(session_end_time);
+  for (var j = 0; j < session_speakers.length; j++) {
+    var session_speaker = session_speakers[j];
+    var session_speaker_name = session_speaker.name;
+    session_speaker_names.push(session_speaker_name);
+  }
+  var session_speaker_names_string = session_speaker_names.join(", ");
+  var session_start_time = getIstanbulTime(session_start);
+  var session_end_time = getIstanbulTime(session_end);
+  var times = session_start_time + " - " + session_end_time;
+  var session_html = "<section><h2>" + session_name + "</h2><h3>" + times + "</h3>"
+
+  for (var j = 0; j < session_speakers.length; j++) {
+    var session_speaker = session_speakers[j];
+    var session_speaker_id = session_speaker.id;
+    var session_speaker_name = session_speaker.name;
+
+    // TODO: Remove this when API returns the correct name
+    if (session_speaker_name == "Simi Vera") {
+      session_speaker_name = "Smriti Verma";
+      session_speaker_id = "smriti_verma";
+      session_speaker_names_string = session_speaker_names_string.replace("Simi Vera", "Smriti Verma");
+    }
+
+    if (session_speaker_name in name_ids) {
+      session_speaker_id = name_ids[session_speaker_name].picture;
+    }
+    session_html += "<img class=\"circular-square\" src=\"images/speakers/"+ session_speaker_id +".jpg\" alt=\"" + session_speaker_name + "\" />";
+  }
+
+  session_html +="<h4>" + session_speaker_names_string + "</h4><p>" + session_description + "</p></section>";
+  return session_html;
+}
+
+function loadSessions() {
+  var name_ids = getNameIds();
+
+  $.ajax({
+    url: "https://app.streameth.org/api/organizations/devconnect/events/evm_summit/sessions?stage=emirgan_1"
+  }).then(function(sessions) { // Main Stage
+    $("#sessions-main").append("<h2>Emirgan 1</h2>");
+    for (var i = 0; i < sessions.length; i++) {
+      var session = sessions[i];
+      session_html = getSessionHtml(session, name_ids);
+      $("#sessions-main").append(session_html);
+    }
+  });
+
+  $.ajax({
+    url: "https://app.streameth.org/api/organizations/devconnect/events/evm_summit/sessions?stage=emirgan_2"
+  }).then(function(sessions) { // Breakout Stage
+    $("#sessions-breakout").append("<h2>Emirgan 2</h2>");
+    for (var i = 0; i < sessions.length; i++) {
+      var session = sessions[i];
+      session_html = getSessionHtml(session, name_ids);
+      $("#sessions-breakout").append(session_html);
+    }
+  });
+}
+
+function showSessions(room) {
+  var main_stage = document.getElementById("sessions-main");
+  var breakout_stage = document.getElementById("sessions-breakout");
+  var main_room_button = document.getElementById("emirgan1-button");
+  var breakout_room_button = document.getElementById("emirgan2-button");
+
+  if (room == "emirgan1") {
+    main_stage.style.display = "block";
+    breakout_stage.style.display = "none";
+    breakout_room_button.classList.remove("disabled");
+    main_room_button.classList.add("disabled");
+  } else {
+    main_stage.style.display = "none";
+    breakout_stage.style.display = "block";
+    breakout_room_button.classList.add("disabled");
+    main_room_button.classList.remove("disabled");
+  }
+}
+
+
 function showMenu() {
   var x = document.getElementById("navLinks");
   if (x.style.display === "block") {
