@@ -212,7 +212,6 @@ function getNameIds() {
 }
 
 function getSessionHtml(session, name_ids) {
-  console.log(name_ids);
   var session_name = session.name;
   var session_description = session.description;
   var session_start_time = session.start;
@@ -230,7 +229,7 @@ function getSessionHtml(session, name_ids) {
   var session_start_time = getIstanbulTime(session_start);
   var session_end_time = getIstanbulTime(session_end);
   var times = session_start_time + " - " + session_end_time;
-  var session_html = "<section><h3>" + session_name + "</h3><h4>" + times + "</h4>"
+  var session_html = "<section><h2>" + session_name + "</h2><h3>" + times + "</h3>"
 
   for (var j = 0; j < session_speakers.length; j++) {
     var session_speaker = session_speakers[j];
@@ -260,6 +259,7 @@ function loadSessions() {
   $.ajax({
     url: "https://app.streameth.org/api/organizations/devconnect/events/evm_summit/sessions?stage=emirgan_1"
   }).then(function(sessions) { // Main Stage
+    $("#sessions-main").append("<h2>Emirgan 1</h2>");
     for (var i = 0; i < sessions.length; i++) {
       var session = sessions[i];
       session_html = getSessionHtml(session, name_ids);
@@ -270,6 +270,7 @@ function loadSessions() {
   $.ajax({
     url: "https://app.streameth.org/api/organizations/devconnect/events/evm_summit/sessions?stage=emirgan_2"
   }).then(function(sessions) { // Breakout Stage
+    $("#sessions-breakout").append("<h2>Emirgan 2</h2>");
     for (var i = 0; i < sessions.length; i++) {
       var session = sessions[i];
       session_html = getSessionHtml(session, name_ids);
@@ -277,6 +278,26 @@ function loadSessions() {
     }
   });
 }
+
+function showSessions(room) {
+  var main_stage = document.getElementById("sessions-main");
+  var breakout_stage = document.getElementById("sessions-breakout");
+  var main_room_button = document.getElementById("emirgan1-button");
+  var breakout_room_button = document.getElementById("emirgan2-button");
+
+  if (room == "emirgan1") {
+    main_stage.style.display = "block";
+    breakout_stage.style.display = "none";
+    breakout_room_button.classList.remove("disabled");
+    main_room_button.classList.add("disabled");
+  } else {
+    main_stage.style.display = "none";
+    breakout_stage.style.display = "block";
+    breakout_room_button.classList.add("disabled");
+    main_room_button.classList.remove("disabled");
+  }
+}
+
 
 function showMenu() {
   var x = document.getElementById("navLinks");
