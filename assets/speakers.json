@@ -84,6 +84,11 @@
     "bio": "",
     "picture": "greg_colvin"
   },
+  "Haichen Shen": {
+    "project": "Scroll",
+    "bio": "Co-founder of Scroll",
+    "picture": "haichen_shen"
+  },
   "Harikrishnan Mulackal": {
     "project": "",
     "bio": "",
@@ -143,11 +148,6 @@
     "project": "Chronicle Labs - Chronicle Protocol - MakerDAO",
     "bio": "Founder of Chronicle Labs, the developers of Chronicle Protocol.\nNik began his crypto journey at IBM Research, where he worked on the Hyperledger blockchain and early supply chain finance applications.\nIn 2017 he joined MakerDAO to create Dai, the first decentralized stablecoin on Ethereum.\nNik is responsible for creating DSProxy. An industry-standard account abstraction primitive, OasisDEX, the first decentralized exchange on Ethereum with an order matching engine, as well as Chronicle Oracle Protocol, which secures over $10B of assets locked in MakerDAO.",
     "picture": "niklas_kunkel"
-  },
-  "Orest Tarasiuk": {
-    "project": "Scroll",
-    "bio": "Old-school computer scientist and founder-CTO. Now working on scaling blockchains using ZK.",
-    "picture": "orest_tarasiuk"
   },
   "Paweł Bylica": {
     "project": "Ipsilon - Ethereum Foundation",
