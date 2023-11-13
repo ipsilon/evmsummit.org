@@ -226,7 +226,19 @@ function getSessionHtml(session, name_ids) {
     var session_speaker_name = session_speaker.name;
     session_speaker_names.push(session_speaker_name);
   }
+
+
+  // TODO: Remove when API returns all speakers
   var session_speaker_names_string = session_speaker_names.join(", ");
+  if (session_id == "exploring_the_past_present_and_future_of_zkevms") {
+    if (session_speaker_names_string.indexOf("Mamy") < 0 ){
+      var name = "Mamy André-Ratsimbazafy";
+      session_speaker_names.push(name);
+      session_speaker_names_string = session_speaker_names.join(", ");
+      session_speakers.push({"id": "mamy_andre_ratsimbazafy", "name": name})
+    }
+  }
+
   var session_start_time = getIstanbulTime(session_start);
   var session_end_time = getIstanbulTime(session_end);
   var times = session_start_time + " - " + session_end_time;
@@ -236,13 +248,6 @@ function getSessionHtml(session, name_ids) {
     var session_speaker = session_speakers[j];
     var session_speaker_id = session_speaker.id;
     var session_speaker_name = session_speaker.name;
-
-    // TODO: Remove this when API returns the correct name
-    if (session_speaker_name == "Simi Vera") {
-      session_speaker_name = "Smriti Verma";
-      session_speaker_id = "smriti_verma";
-      session_speaker_names_string = session_speaker_names_string.replace("Simi Vera", "Smriti Verma");
-    }
 
     if (session_speaker_name in name_ids) {
       session_speaker_id = name_ids[session_speaker_name].picture;
