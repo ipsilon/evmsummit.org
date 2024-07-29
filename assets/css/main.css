@@ -98,7 +98,7 @@ input, select, textarea {
 	}
 
 	body {
-		background: #312450;
+		background: #87CAAB;
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -196,10 +196,10 @@ input, select, textarea {
 		}
 
 			h1.major:after {
-				background-image: -moz-linear-gradient(to right, #5e42a6, #b74e91);
-				background-image: -webkit-linear-gradient(to right, #5e42a6, #b74e91);
-				background-image: -ms-linear-gradient(to right, #5e42a6, #b74e91);
-				background-image: linear-gradient(to right, #5e42a6, #b74e91);
+				background-image: -moz-linear-gradient(to right, #f88274, #fcb880);
+				background-image: -webkit-linear-gradient(to right, #f88274, #fcb880);
+				background-image: -ms-linear-gradient(to right, #f88274, #fcb880);
+				background-image: linear-gradient(to right, #f88274, #fcb880);
 				-moz-transition: max-width 0.2s ease;
 				-webkit-transition: max-width 0.2s ease;
 				-ms-transition: max-width 0.2s ease;
@@ -2777,11 +2777,11 @@ input, select, textarea {
 			}
 
 				.wrapper.style1 .icon.major:before {
-					color: #5e42a6;
+					color: #f88274;
 				}
 
 				.wrapper.style1-alt .icon.major:before {
-					color: #493382;
+					color: #fcb880;
 				}
 
 				.wrapper.style2 .icon.major:before {
@@ -3067,6 +3067,10 @@ input, select, textarea {
 				ul.icons li > a .label, ul.icons li > span .label {
 					display: none;
 				}
+
+  ul.icons img{
+    height: 36px;
+  }
 
 /* Menu */
 
@@ -3485,20 +3489,20 @@ input, select, textarea {
     }
 
     .wrapper.style-top {
-      background: rgb(48,21,76);
-      background: radial-gradient(circle, rgba(48,21,76,1) 37%, rgba(58,33,127,1) 77%, rgba(143,23,64,1) 100%);
+      background: rgb(12,156,141);
+      background: radial-gradient(circle, rgba(250,184, 126,1) 37%, rgba(12,156,141,1) 77%, rgba(34,90,79,1) 100%);
     }
 
     @media screen and (max-width: 736px) {
       .wrapper.style-top {
-        background: #8B1843;
+        background: #206156;
       }
     }
 
 
 		.wrapper.style0 {
-      background: rgb(48,21,76);
-      background: radial-gradient(circle, rgba(48,21,76,1) 37%, rgba(58,33,127,1) 77%, rgba(143,23,64,1) 100%);
+      background: rgb(12,156,141);
+      background: radial-gradient(circle, rgba(132,202, 168,1) 37%, rgba(12,156,141,1) 77%, rgba(34,90,79,1) 100%);
 		}
 
 		.wrapper.style1 {
@@ -3512,7 +3516,7 @@ input, select, textarea {
 
 		.wrapper.style2 {
       background: rgb(174,44,97);
-      background: radial-gradient(circle at left, rgba(174,44,97,1) 37%, rgba(174,44,97,1) 87%, rgba(196,59,157,1) 100%);
+      background: radial-gradient(circle at left, rgba(23,157,140,1) 37%, rgba(172,202,178,1) 87%, rgba(252,220,179,1) 100%);
 		}
 
 		.wrapper.style2-alt {
@@ -3521,7 +3525,7 @@ input, select, textarea {
 
 		.wrapper.style3 {
       background: rgb(189,101,57);
-      background: radial-gradient(circle at left, rgba(189,101,57,1) 0%, rgba(151,69,173,1) 64%, rgba(248,101,176,1) 100%);
+      background: radial-gradient(circle at left, rgba(250,110,117,1) 0%, rgba(200,81,105,1) 64%, rgba(250,221,180,1) 100%);
 		}
 
 		.wrapper.style3-alt {
@@ -3530,7 +3534,7 @@ input, select, textarea {
 
 		.wrapper.style4 {
       background: rgb(217,85,132);
-      background: radial-gradient(circle at left, rgba(217,85,132,1) 37%, rgba(215,146,203,1) 77%, rgba(224,147,237,1) 100%);
+      background: radial-gradient(circle at left, rgba(227,97,112,1) 37%, rgba(226,219,179,1) 77%, rgba(104,161,181,1) 100%);
 		}
 
 		.wrapper.style5 {
@@ -3544,7 +3548,7 @@ input, select, textarea {
 
 		.wrapper.style7 {
       background: rgb(48,21,76);
-      background: radial-gradient(circle at left, rgba(48,21,76,1) 37%, rgba(58,33,127,1) 77%, rgba(143,23,64,1) 100%);
+      background: radial-gradient(circle at left, rgba(9,112,91,1) 37%, rgba(53,143,138,1) 77%, rgba(135,200,168,1) 100%);
 		}
 
 
@@ -4098,14 +4102,14 @@ input, select, textarea {
 			}
 
 			#sidebar nav a:before {
-				background: #000000;
+				background: #87CAAB;
 			}
 
 			#sidebar nav a:after {
-				background-image: -moz-linear-gradient(to right, #000000, #F4AB33);
-				background-image: -webkit-linear-gradient(to right, #000000, #F4AB33);
-				background-image: -ms-linear-gradient(to right, #000000, #F4AB33);
-				background-image: linear-gradient(to right, #000000, #F4AB33);
+				background-image: -moz-linear-gradient(to right, #87CAAB, #DBB469);
+				background-image: -webkit-linear-gradient(to right, #87CAAB, #DBB469);
+				background-image: -ms-linear-gradient(to right, #87CAAB, #DBB469);
+				background-image: linear-gradient(to right, #87CAAB, #DBB469);
 				-moz-transition: max-width 0.2s ease;
 				-webkit-transition: max-width 0.2s ease;
 				-ms-transition: max-width 0.2s ease;
@@ -4270,6 +4274,10 @@ input, select, textarea {
 
 #sm-icons a {
   padding: 0 0.5em 0 0;
+}
+
+#sm-icons img {
+  height: 36px;
 }
 
 .circular-square {
